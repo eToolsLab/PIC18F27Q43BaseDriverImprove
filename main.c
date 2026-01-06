@@ -72,7 +72,6 @@
 #include <stdbool.h>
 #include "Q_peripheral27Q43.h"
 #include "Q_interrupt27Q43.h"
-#include "Q_initialize.h"
 #include "Q_I2C1Tup.h"
 #include "I2C_LCD.h"
 #include "stringFormat.h"
