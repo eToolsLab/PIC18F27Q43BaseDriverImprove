@@ -217,6 +217,7 @@ uint8_t I2C1_b1Read(uint8_t _deviceAdd,uint8_t _address)
     uint8_t ret;
    
     //タイムアウト始動-------------
+    PIR11bits.TMR4IF=0;
     PIE11bits.TMR4IE=1;
     T4CONbits.TMR4ON=1;
     I2C1CON0bits.EN=1;

@@ -18,6 +18,7 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 #include "Q_peripheral27Q43.h"
+#include "Q_I2C1Tup.h"
     
 #define EEPROMdeviceAdd 0xAC
 #define EEPROM24LC256 0xAC

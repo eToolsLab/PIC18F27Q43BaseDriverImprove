@@ -1,5 +1,5 @@
 #include "EEPROM_24LCxxx.h"
-#include "Q_I2C1Tup.h"
+
 
 uint8_t eeprom_b1Write(uint8_t _deviceAdd, uint16_t _address, uint8_t _data)
 {
@@ -82,6 +82,8 @@ uint8_t eeprom_b1Read(uint8_t _deviceAdd,uint16_t _address)
     uint8_t _addH, _addL;
     _addH=(uint8_t)(_address>>8);
     _addL=(uint8_t)(_address);
+    
+    PIR11bits.TMR4IF=0;
     PIE11bits.TMR4IE=1;
     T4CONbits.TMR4ON=1;
     I2C1CON0bits.EN=1;
@@ -167,6 +169,8 @@ uint8_t eeprom_bnWrite(uint8_t _deviceAdd, uint16_t _address, uint8_t *_dataArra
     uint8_t _addH, _addL;
     _addH=(uint8_t)(_address>>8);
     _addL=(uint8_t)(_address);
+    
+    PIR11bits.TMR4IF=0;
     PIE11bits.TMR4IE=1;
     T4CONbits.TMR4ON=1;
     I2C1CON0bits.EN=1;
